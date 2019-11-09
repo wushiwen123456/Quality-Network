@@ -1,0 +1,37 @@
+/* components/MyFoot/MyFoot.wxss */
+.foot {
+    height: 100rpx;
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    border-top: 2rpx solid #eee;
+    border-left: 2rpx solid #eee;
+    box-sizing: border-box;
+}
+
+
+
+.foot1 {
+    width: 33%;height: 60rpx;line-height: 60rpx;
+    text-align: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    font-size: 24rpx;
+    display: inline-block;
+    vertical-align: top;
+    color: #797979;
+    padding: 20rpx 0;
+    border-right: 1px solid #eee;
+}
+.foot1 .image1 {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.background1 {
+    background: linear-gradient(to right, #FA6748 , #F98A72) !important;
+}

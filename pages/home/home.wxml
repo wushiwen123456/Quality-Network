@@ -1,0 +1,85 @@
+<!-- pages/home/home.wxml -->
+<view class="all">
+    <MyTitle></MyTitle>
+    <swiper class="swiper" autoplay indicator-dots circular indicator-active-color='#fff' interval='4000'>
+        <block wx:for="{{swiperList}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item.img}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="btnWarp">
+        <view class="maimai">
+            <image class="maiImg1" src="./image/icon-shop@2x.png" />
+            <text>我要买店</text>
+        </view>
+        <view class="maimai">
+            <image class="maiImg2" src="./image/icon-sell@2x.png" />
+            <text>我要卖店</text>
+        </view>
+    </view>
+    <view class="searchWarp">
+        <view class="searchItem">
+            <image src="./image/icon-tmall@2x.png" />
+            <text>天猫店铺</text>
+        </view>
+        <view class="searchItem">
+            <image src="./image/icon-taobao@2x.png" />
+            <text>淘宝店铺</text>
+        </view>
+        <view class="searchItem">
+            <image src="./image/icon-jingdong@2x.png" />
+            <text>京东店铺</text>
+        </view>
+        <view class="searchItem">
+            <image src="./image/icon-dianpu@2x.png" />
+            <text>其他店铺</text>
+        </view>
+    </view>
+    <view class="titleWarp">
+        <view class="line backgroundChange-top"></view>
+        <text>近6个月动态数据</text>
+    </view>
+    <view class="dataWrap">
+        <view class="dataItem">
+            <text class="dataTex">网店交易数量</text>
+            <text class="DataNum">{{dynamic.newCount}}</text>
+        </view>
+        <view class="midLine"></view>
+        <view class="dataItem">
+            <text class="dataTex">网店交易金额</text>
+            <text class="DataNum">{{dynamic.price}}</text>
+        </view>
+        <view class="midLine"></view>
+        <view class="dataItem">
+            <text class="dataTex">新增网店数量</text>
+            <text class="DataNum">{{dynamic.count}}</text>
+        </view>
+    </view>
+    <view class="titleWarp">
+        <view class="line backgroundChange-top"></view>
+        <text>精选店铺</text>
+    </view>
+    <view class="shopList">       
+        <navigator url="../detail/detail?id={{item.id}}" class="shopItem" wx:for="{{shopList}}" wx:key="{{index}}">
+            <image class="shopItemImg" src="{{item.logo}}"></image>
+            <view class="itemDetails">
+                <view class="mui-ellipsis">{{item.title}}</view>
+                <view>
+                    <view class="moneyShow">
+                        ￥
+                        <text>{{item.priceStr}}</text>
+                        万
+                    </view>
+                    <view style="width:70%;" class="mui-table">
+                        <label>类型：{{item.shopType}}</label>
+                        <label>类目：{{item.category}}</label>\n
+                        <label>商标：{{item.trademarkType}}</label>
+                        <label>评分：{{item.status}}-{{item.status}}-{{item.status}}</label>
+                    </view>
+                </view>
+                <view class="mui-h6 mui-ellipsis">开通类目：{{item.firstCategory}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

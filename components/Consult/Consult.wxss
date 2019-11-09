@@ -1,0 +1,12 @@
+/* components/Consult/Consult.wxss */
+.zexun {
+    position: fixed;bottom: 120rpx;right: 20rpx;
+    width: 110rpx;height: 110rpx;border-radius: 50%;background: #F47F29;
+    overflow: hidden;
+    vertical-align: middle;
+    
+}
+.zexun image {
+    width: 100rpx;height: 100rpx;
+    
+}

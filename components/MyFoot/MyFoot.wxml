@@ -1,0 +1,15 @@
+<!--components/MyFoot/MyFoot.wxml-->
+<view class="foot">
+    <view>
+         <view class="foot1">
+        <image src="./image/server.png" class="image1"></image><text class="" >联系客服</text>
+    </view>
+    <view class="foot1">
+        <image src="./image/phone.png" class="image1"></image><text class="" >电话咨询</text>
+    </view>
+    <view class="foot1 background1">
+        <view>立即购买</view>
+    </view>
+    </view>
+   
+</view>

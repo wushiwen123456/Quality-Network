@@ -1,0 +1,42 @@
+/* components/MyTitle/MyTitle.wxss */
+.head {
+    display: flex;
+    align-items: center;
+    padding: 16rpx 26rpx;
+    padding-left: 6rpx;
+}
+
+.logo {
+    width: 120rpx;
+    height: 40rpx;
+    display: block;
+}
+
+.search {
+    flex: 1;
+    height: 56rpx;
+    border-radius: 28rpx;
+    background: #E1E1E1;
+    margin: 0 6rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchicon {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.searchtext {
+    font-size: 30rpx;
+    color: #B2B2B2;
+    margin: 0;
+    margin-left: 12rpx;
+}
+
+.more {
+    width: 52rpx;
+    height: 40rpx;
+    display: block;
+}

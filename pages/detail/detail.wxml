@@ -1,0 +1,207 @@
+<!-- pages/detail/detail.wxml -->
+<view>
+  <MyTitle></MyTitle>
+  <view class="titleWrap">
+    <view class="title">
+      <image id="shopTypeLogo" alt="" src="{{findShop.logo}}" />
+      <text id="shopTitle">{{findShop.description}}</text>
+    </view>
+    <view class="prise" id="shopPrice">￥ {{findShop.margin}}</view>
+    <view class="payWrap">
+      <view class="showPay">
+        <view class="showPayText">消保：</view>
+        <view class="showPayPrise" id="shopMargin">￥ 50000</view>
+      </view>
+      <view class="line"></view>
+      <view class="yearPay">
+        <view class="yearPayText">年费：</view>
+        <view class="yearPayPrise" id="shopTechnologyFee">￥ 60000</view>
+      </view>
+    </view>
+  </view>
+  <view class="shopDetail">
+    <view class="code">
+      网店编号：
+      <text id="shopSn">{{findShop.id}}</text>
+    </view>
+    <view class="detail">
+      <view class="item">
+        <text class="itemText">类目：</text>
+        <text class="itemDetail" id="shopFirstCategory">{{findShop.firstCategory}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">类型：</text>
+        <text class="itemDetail" id="shopType">{{findShop.shopType}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">贷款：</text>
+        <text class="itemDetail" id="shopYiDaiKuan">{{findShop.yiDaiKuan}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">商标属性：</text>
+        <text class="itemDetail" id="shopTrademarkCategory">{{findShop.trademarkCategory}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">商标类型：</text>
+        <text class="itemDetail" id="shopTrademarkType">{{findShop.trademarkType}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">所在地区：</text>
+        <text class="itemDetail" id="shopRegion">{{findShop.region}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">入驻时间：</text>
+        <text class="itemDetail" id="shopOpenTime">{{findShop.detailMap.shopInfo.openTime}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">提供货源：</text>
+        <text class="itemDetail" id="shopGoodsTransfer">否</text>
+      </view>
+      <view class="item">
+        <text class="itemText">纳税类型：</text>
+        <text class="itemDetail" id="shopTaxpayer"> {{findShop.detailMap.companyInfo.taxpayer}}</text>
+      </view>
+      <view class="item">
+        <text class="itemText">售假违规：</text>
+        <text class="itemDetail" id="shopCounterfeitsDeduct">0分</text>
+      </view>
+      <view class="item">
+        <text class="itemText">一般违规：</text>
+        <text class="itemDetail" id="shopNormalDeduct">0分</text>
+      </view>
+      <view class="item">
+        <text class="itemText">严重违规：</text>
+        <text class="itemDetail" id="shopGraveDeduct">0分</text>
+      </view>
+    </view>
+  </view>
+  <view class="serverWrap">
+    <view style="width: 70px;height: 70px;border-radius: 50%;overflow:hidden;">
+      <image src="{{findShop.serviceHeadImg}}" id="shopServiceImg" />
+    </view>
+    <view class="serverDetailWrap">
+      <view class="serverInfo">
+        <view class="name" id="shopAbutName">{{findShop.serviceName}}</view>
+        <view class="info" id="shopAbutNumber">工号：{{findShop.serviceWorkNum}}</view>
+        <view class="info" id="shopAbutQQ">QQ：{{findShop.serviceQQ}}</view>
+      </view>
+      <view class="line"></view>
+      <view class="ask" id="gotoShopAbut">
+        <image class="aliIconfont" src="./image/service.png"></image>
+        <text class="askText">联系客服</text>
+      </view>
+    </view>
+  </view>
+  <view class="tapWrap">
+    <view class="tapItem {{currentTab==0?'select':''}}" data-current="0" bindtap="clickTab">
+      店铺截图
+    </view>
+    <view class="tapItem {{currentTab==1?'select':''}}" data-current="1" bindtap="clickTab">
+      卖家寄语
+    </view>
+    <view class="tapItem {{currentTab==2?'select':''}}" data-current="2" bindtap="clickTab">
+      购买流程
+    </view>
+    <view class="tapItem {{currentTab==3?'select':''}}" data-current="3" bindtap="clickTab">
+      相关推荐
+    </view>
+  </view>
+  <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab" class="swiper1" >
+    <swiper-item class="progressWrap1">
+      <view class="titleText">卖家寄语</view>
+     <swiper autoplay="{{true}}"interval="3000" duration="500" circular="{{true}}" class="swiper2" indicator-dots="{{true}}">
+  <block wx:for="{{shopImgs}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="shop-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+    </swiper-item >
+    <swiper-item class="progressWrap" >
+      <view class="titleText">卖家寄语</view>
+      <view class="sayText" id="shopDescription">{{findShop.description}}</view>
+    </swiper-item>
+    <swiper-item class="progressWrap">
+      <view class="titleText">购买流程</view>
+      <view class="progressContent">
+        <view class="progressItem bottom right">
+          <image src="./image/1@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">选择网店</view>
+            <view class="progressTextContent">选择自己中意的网店</view>
+          </view>
+        </view>
+        <view class="progressItem bottom">
+          <image src="./image/2@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">拍下付款</view>
+            <view class="progressTextContent">选择支付定金或全款</view>
+          </view>
+        </view>
+        <view class="progressItem bottom right">
+          <image src="./image/3@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">核对信息</view>
+            <view class="progressTextContent">提供证件核对店铺信息</view>
+          </view>
+        </view>
+        <view class="progressItem bottom">
+          <image src="./image/4@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">签订合同</view>
+            <view class="progressTextContent">双方签署转让居间合同</view>
+          </view>
+        </view>
+        <view class="progressItem right bottom">
+          <image src="./image/5@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">交接过户</view>
+            <view class="progressTextContent">交接网店并过户公司</view>
+          </view>
+        </view>
+        <view class="progressItem bottom">
+          <image src="./image/6@2x.png" alt="" />
+          <view class="progressText">
+            <view class="progressTextTitle">交易完成</view>
+            <view class="progressTextContent">购买网店成功预祝生意兴隆</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class="progressWrap" >
+      <view class="shopListTitleWrap" >
+         <view class="titleText">购买流程</view>
+       <view class="freshWrap" bindtap="tryOneTry">
+                        <image src="./image/change@2x.png" alt="" />
+                        <text >换一换</text>
+                    </view>
+                          </view>
+                    <view class="shopList">       
+        <navigator url="../detail/detail?id={{item.id}}" class="shopItem" wx:for="{{shopList}}" wx:key="{{index}}">
+            <image class="shopItemImg" src="{{item.logo}}"></image>
+            <view class="itemDetails">
+                <view class="mui-ellipsis">{{item.title}}</view>
+                <view>
+                    <view class="moneyShow">
+                        ￥
+                        <text>{{item.priceStr}}</text>
+                        万
+                    </view>
+                    <view style="width:70%;" class="mui-table">
+                        <label>类型：{{item.shopType}}</label>
+                        <label>类目：{{item.category}}</label>\n
+                        <label>商标：{{item.trademarkType}}</label>
+                        <label>评分：{{item.status}}-{{item.status}}-{{item.status}}</label>
+                    </view>
+                </view>
+                <view class="mui-h6 mui-ellipsis">开通类目：{{item.firstCategory}}</view>
+            </view>
+        </navigator>
+    </view>
+
+    </swiper-item>
+  </swiper>
+
+</view>
+  <Consult></Consult>
+  <MyFoot></MyFoot>

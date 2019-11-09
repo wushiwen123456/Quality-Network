@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/search/search",
+    "pages/searchDetail/searchDetail",
+    "pages/detail/detail",
+    "pages/person/person",
+    "pages/sell/sell",
+    "pages/service/service",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "优网店",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#9d9d9d",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "iconImage/notChooseHome1.png", 
+      "selectedIconPath": "iconImage/chooseHome.png", 
+      "text": "首页"
+    }, {
+      "pagePath": "pages/service/service",
+      "iconPath": "iconImage/noChooseService1.png", 
+      "selectedIconPath": "iconImage/noChooseService1.png", 
+      "text": "客服"
+    }, {
+      "pagePath": "pages/sell/sell",
+      "iconPath": "iconImage/notChooseSell1.png", 
+      "selectedIconPath": "iconImage/chooseSell.png", 
+      "text": "出售网店"
+    }, {
+      "pagePath": "pages/person/person",
+      "iconPath": "iconImage/notChooseCenter1.png", 
+      "selectedIconPath": "iconImage/chooseCenter.png", 
+      "text": "个人中心"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

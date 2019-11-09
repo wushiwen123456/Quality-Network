@@ -1,0 +1,24 @@
+<!-- pages/search/search.wxml -->
+<view>
+        <view class="head">
+                <image class="logo" src="./image/logo.png" />
+                <view url="../../pages/search/search" class="search">
+                        <image class="searchicon" src="./image/search@2x.png" />
+                        <input type="text" placeholder="请输入您想要搜索的店铺" placeholder-style="color:#fff" bindblur="changeData" />
+                </view>
+                <navigator class="text" url="../searchDetail/searchDetail?keyword={{search}}" >
+                        完成
+                </navigator>
+        </view>
+        <view class="hotsearch">
+                <text class="hotSelect">热门搜索</text>
+                <view>
+                        <label class="selectItem" wx:for="{{HotSelect}}" wx:key="{{index}}">
+                              <navigator url="../searchDetail/searchDetail?keyword={{item}}" >
+                  {{item}}
+                </navigator>
+                        </label>
+                </view>
+        </view>
+</view>
+<Consult></Consult>

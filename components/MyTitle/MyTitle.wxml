@@ -1,0 +1,9 @@
+<!-- components/MyTitle/MyTitle.wxml -->
+<view class="head">
+    <image class="logo" src="./image/logo.png" />
+    <navigator url="../../pages/search/search" class="search">
+            <image class="searchicon" src="./image/search@2x.png" />
+            <text class="searchtext">搜索</text>
+    </navigator>
+    <image class="more" src="./image/fenlei@2x.png"></image>
+</view>

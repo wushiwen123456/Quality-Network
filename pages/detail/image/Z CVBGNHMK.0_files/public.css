@@ -1,0 +1,77 @@
+/* 买店铺变量 */
+/*.mainc{*/
+    /*color: #6699ff;*/
+/*}*/
+/*.mainbg{*/
+    /*background: #6699ff;*/
+/*}*/
+
+@font-face{
+    font-family: 'priceziti';
+    src: url('/css/fonts/Impact.ttf');
+}
+
+/* 优网店变量 */
+.mainc{
+    color: #ee8a34 !important;
+}
+.mainbg{
+    background: #ee8a34;
+}
+
+.jianbianbg{
+    background: linear-gradient(to right,#EC9337,#F2BB45);
+}
+
+
+/* 公用样式 - 开始 */
+*{
+    margin:0; padding:0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+/* 兼容ie中a标签下的img标签会有边框 */
+a img{
+    border: none;
+}
+ul li{
+    list-style: none;
+}
+ol li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.pos-r{
+    position: relative; top: 0; left: 0;
+}
+.pos-a{
+    position: absolute;
+}
+.pos-f{
+    position: fixed;
+}
+/* 公共的显示隐藏类 */
+.hideI{
+    display: none !important;
+}
+.showI{
+    display: block !important;
+}
+/* 公用样式 - 结束 */
+*{
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, SimSun, sans-serif;
+}

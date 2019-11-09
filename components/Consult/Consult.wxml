@@ -1,0 +1,4 @@
+<!--components/Consult/Consult.wxml-->
+    <view class="zexun">
+        <image src="./image/module-bg-6.png"></image>
+    </view>

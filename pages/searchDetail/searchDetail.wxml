@@ -1,0 +1,59 @@
+<!-- pages/searchDetail/searchDetail.wxml -->
+<view class="box">
+    <view class="head">
+        <view class="zhixiang" bindtap="showList">
+            天猫店铺
+            <image src="./image/zhixiang.png" class=" {{showList === true ? 'xuanzhuan' : 'xuanzhuan1'}}"></image>
+        </view>
+        <view class="search">
+            <navigator url="../search/search">
+                <image src="./image/search.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="selectShop {{showList ===true ?'showList1':''}}">
+        <text class="selectShopItems {{shopIndex == 1 ? 'select1':''}}" data-type="天猫商城" data-index="1" bindtap="checkShop">天猫商城</text>
+        <text class="selectShopItems {{shopIndex == 2 ? 'select1':''}}" data-type="淘宝网店" data-index="2" bindtap="checkShop">淘宝网店</text>
+        <text class="selectShopItems {{shopIndex == 3 ? 'select1':''}}" data-type="京东商城" data-index="3" bindtap="checkShop">京东商城</text>
+        <text class="selectShopItems {{shopIndex == 4 ? 'select1':''}}" data-type="其他网店" data-index="4" bindtap="checkShop">其他网店</text>
+    </view>
+    <view class="fenlei">
+        <view class="fenleiItem " bindtap="paixu">
+            {{msg}}
+            <image src="./image/daohang.png"  class=" {{paixu === true ? 'xuanzhuan' : 'xuanzhuan1'}}"></image>
+        </view>
+        <view class="fenleiItem">
+            筛选
+            <image src="./image/shaixuan.png" ></image>
+        </view>
+         <view style="position: relative;">
+                <view class="paixu {{paixu ===true ?'showList1':'dispalynone'}}">
+                    <view bindtap="cutCondition3"data-orderBy="PRICE" data-text="综合排序">综合排序</view>
+                    <view bindtap="cutCondition2" data-orderBy="PRICE" data-orderOption="ASC" data-text="价格由低到高">价格由低到高</view>
+                    <view bindtap="cutCondition1" data-orderBy="PRICE" data-orderOption="DESC" data-text="价格由高到低">价格由高到低</view>
+                </view>
+            </view>
+    </view>
+    <view class="shopList">       
+        <navigator url="../detail/detail?id={{item.id}}" class="shopItem" wx:for="{{shopList}}" wx:key="{{index}}">
+            <image class="shopItemImg" src="{{item.logo}}"></image>
+            <view class="itemDetails">
+                <view class="mui-ellipsis">{{item.title}}</view>
+                <view>
+                    <view class="moneyShow">
+                        ￥
+                        <text>{{item.priceStr}}</text>
+                        万
+                    </view>
+                    <view style="width:70%;" class="mui-table">
+                        <label>类型：{{item.shopType}}</label>
+                        <label>类目：{{item.category}}</label>\n
+                        <label>商标：{{item.trademarkType}}</label>
+                        <label>评分：{{item.status}}-{{item.status}}-{{item.status}}</label>
+                    </view>
+                </view>
+                <view class="mui-h6 mui-ellipsis">开通类目：{{item.firstCategory}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

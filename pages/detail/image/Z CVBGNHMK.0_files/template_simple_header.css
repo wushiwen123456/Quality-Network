@@ -1,0 +1,215 @@
+/* 公用头部 - 开始 */
+
+.header-public{
+    background: #fff;
+    /*border: 1px solid #e6e8eb;*/
+}
+
+.header-wrap{
+    position: absolute; top: 0;
+    width: 100%; height: 30px; line-height: 30px;
+    font-size: 12px; color: #333;
+    background: #e6e3e3;
+}
+.header-public .header{
+    width: 1200px; height: 100%; margin: 0 auto;
+}
+.header-left{
+    margin-left: 260px;
+}
+.header-login{
+    margin-left: 20px; color: #333;
+}
+.header-regist{
+    margin-left: 20px; color: #D0021B;
+}
+.manager-btn{
+    color: #387EE8; margin-left: 14px;
+}
+
+.search-wrap{
+    width: 1200px; 
+    margin: 0 auto;
+}
+
+.logo{
+    width: 240px; height: 140px; background: #fff;
+    display: flex; justify-content: center; align-items: center;
+    position: relative; top: 30px; left: 0;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.header-nav{
+    width: 690px; height: 100%;
+}
+.search{
+    width: 550px;
+    margin-top: 50px; margin-left: 110px;
+}
+
+.search-box{
+    height: 36px; line-height: 36px;
+    margin: 0 auto;
+}
+.search-box-border{
+    border: 1px solid #D2D2D2; box-sizing: border-box;
+    width: 496px; height: 36px; line-height: 36px;
+    margin: 0 auto;
+}
+.hot-word{
+    margin-top: 18px;
+}
+.hot-word a{
+    font-size: 12px; color: #999 !important;
+}
+.hot-word label{
+    margin-right: 15px;
+}
+.hot-word a{
+    margin-right: 25px; cursor: pointer;
+}
+
+.nav-search-label{
+    width: 82px; height: 100%;
+    background: #fff; color: #666;
+    font-size: 12px; text-align: center;
+    overflow: hidden;
+    position: relative; top: 0; left: 0; z-index: 2;
+    cursor: pointer;
+}
+.nav-search-label:hover{
+    overflow: visible;
+}
+.nav-search-label:after{
+    content: '';
+    display: block;
+    position: absolute; top: 0; bottom: 0; right: 0;
+    margin: auto; width: 1px; height: 14px; background: #CBCBCB;
+}
+.nav-search-label li{
+    background: #fff;
+}
+.nav-search-label li:hover{
+    color: #FBAB41;
+}
+.active-search-tab{
+    color: #FBAB41;
+}
+.nav-search-label li ~ li{
+    border-top: 1px solid #F5F5F6;
+}
+.search-input{
+    width: 412px; height: 100%;
+    border: none; outline: none;
+    background: #fff; text-indent: 1em;
+    box-sizing: border-box;
+    padding-right: 1em;
+}
+
+.search-box .search-btn{
+    width: 54px; height: 100%;
+    background: linear-gradient(to right, #FFC400, #FFA700);
+    color: #fff; font-size: 22px; text-align: center; line-height: 36px;
+
+}
+
+.header-tab{
+    width: 690px;
+    display: flex; justify-content: space-around;
+    margin: 18px 0;
+    font-size: 16px;
+}
+.header-tab a{
+    color: #333;
+}
+
+.header-tab span{
+    color: #333;
+    cursor: pointer;
+}
+
+.sell-shop{
+    width: 190px; height: 36px;
+    display: flex; justify-content: center;
+    align-items: center;
+    color: #FFB500;
+    background: #fff;
+    box-shadow:0px 2px 2px 0px rgba(102,102,102,0.1);
+    margin-top: 50px;
+}
+.sell-btn{
+    font-size: 14px; color: #FFB500;
+    margin-left: 10px;
+    margin-right: 25px;
+    padding-bottom: 2px;
+}
+
+
+/* 公用头部 - 结束 */
+
+    /* 头部 - 开始 */
+    .headWrap .header{
+        width: 100%; height: 40px; background: #3A4043;
+        display: none;
+    }
+    .header-box{
+        width: 1200px; height: 40px;
+        margin: 0 auto;
+    }
+
+    .nav-left{
+    }
+    .nav-left-a{
+        display: inline-block;
+        margin-right: 60px;
+        font-size: 12px; color: #fff;
+        height: 40px; line-height: 40px;
+    }
+    .logoImg{
+        width: 163px; height: 40px;
+    }
+
+    .phone{
+        display: inline-block;
+        margin-right: 50px;
+        line-height: 40px;
+        font-size: 12px; font-weight: 600; color: #fff;
+    }
+    .icon-phone1{
+        font-size: 12px !important;
+    }
+
+    .nav-right{
+        line-height: 40px;
+        font-size: 12px;
+    }
+
+    .nav-right-a{
+        text-align: right;
+        color: #fff;
+        width: 60px;
+    }
+    .nav-right-user{
+        color: #fff;
+        margin-right: 20px;
+        display: none;
+    }
+    .manager-btn{
+        margin-right: 18px;
+    }
+
+    .login-icon{
+        margin-right: 15px;
+    }
+    .phone-icon{
+        margin-right: 5px;
+    }
+
+    .yes-login{
+        display: none;
+    }
+    .no-login{
+        display: inline-block;
+    }
+    /* 头部 - 结束 */

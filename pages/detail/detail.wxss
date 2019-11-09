@@ -1,0 +1,410 @@
+/* pages/detail/detail.wxss */
+.titleWrap {
+    background: #fff;
+    width: 100%;
+    padding: 0 26rpx;
+    border-bottom: 20rpx solid rgb(243, 243, 243)
+}
+
+.title {
+    padding-top: 26rpx;
+}
+
+.title image {
+    width: 34rpx;
+    height: 34rpx;
+    top: 4rpx;
+    position: relative;
+}
+
+.title text {
+    line-height: 40rpx;
+    font-size: 34rpx;
+    color: #333;
+    font-weight: bold;
+}
+
+.prise {
+    font-size: 36rpx;
+    color: #FF0000;
+    margin-top: 36rpx;
+    font-weight: 600;
+}
+
+.payWrap {
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+}
+
+.showPay {
+    display: flex;
+    align-items: center;
+}
+
+.showPayText,
+.yearPayText {
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 600;
+}
+
+.showPayPrise,
+.yearPayPrise {
+    font-size: 28rpx;
+    color: #FF0000;
+    font-weight: 600;
+}
+
+.payWrap .line {
+    width: 2rpx;
+    background: #999;
+    height: 26rpx;
+    margin: 0 30rpx;
+}
+
+.yearPay {
+    display: flex;
+    align-items: center;
+}
+
+.shopDetail {
+    width: 100%;
+    /* height: 220px; */
+    background: #fff;
+    padding: 30rpx 26rpx 40rpx;
+    box-sizing: border-box;
+    border-bottom: 20rpx solid rgb(243, 243, 243)
+}
+
+.code {
+    width: 100%;
+    height: 60rpx;
+    background: #E4E4E4;
+    color: #333;
+    font-size: 28rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    line-height: 60rpx;
+    margin-bottom: 6rpx;
+}
+
+.detail {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 14rpx;
+}
+
+.detail .item {
+    width: 50%;
+    float: left;
+    display: flex;
+    /* align-items: center; */
+    justify-content: left;
+    margin-top: 16rpx;
+}
+
+.item .itemText {
+    font-size: 24rpx;
+    color: #C7C7C7;
+    line-height: 28rpx;
+}
+
+.item .itemDetail {
+    font-size: 24rpx;
+    color: #333333;
+    line-height: 28rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.serverWrap {
+    width: 100%;
+    height: 200rpx;
+    background: #fff;
+    margin-top: 20rpx;
+    padding: 30rpx 40rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.serverWrap #shopServiceImg {
+    width: 140rpx;
+    height: 140rpx;
+    display: block;
+}
+
+.serverDetailWrap {
+    width: 100%;
+    margin-left: 20rpx;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.serverInfo .name {
+    font-size: 30rpx;
+    color: #333;
+    line-height: 34rpx;
+}
+
+.serverInfo .info {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 28rpx;
+    margin-top: 14rpx;
+}
+
+.serverInfo .info {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 28rpx;
+    margin-top: 14rpx;
+}
+
+.line {
+    width: 2rpx;
+    height: 60rpx;
+    background: #C7C7C7;
+}
+
+.ask {
+    width: 190rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    border: 2rpx solid #F66E00;
+    border-radius: 26rpx;
+    justify-content: center;
+}
+
+.aliIconfont {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 14rpx;
+}
+
+.ask .askText {
+    font-size: 24rpx;
+    color: #F66E00;
+}
+
+.tapWrap {
+    width: 100%;
+    height: 84rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    margin-top: 20rpx;
+    border-bottom: 2rpx solid #F4F4F6;
+}
+
+.select {
+    border-bottom: 4rpx solid #F66E00;
+}
+
+.tapWrap .tapItem {
+    font-size: 30rpx;
+    color: #999;
+    line-height: 76rpx;
+}
+
+.swiper1 {
+    width: 100%;
+    height: 1270rpx;
+    background: #fff;
+    display: block;
+    box-sizing: border-box;
+}
+
+.titleText {
+    font-size: 30rpx;
+    color: #333;
+    line-height: 24rpx;
+    font-weight: 600;
+}
+
+
+.sayText {
+    font-size: 24rpx;
+    color: #333;
+    margin-top: 34rpx;
+}
+
+.progressWrap {
+    width: 100%;
+    height: 584rpx;
+    background: #fff;
+    padding: 34rpx 26rpx;
+    box-sizing: border-box;
+}
+
+.progressWrap1 {
+    width: 100%;
+    height: 584rpx;
+    background: #fff;
+    padding: 34rpx 0rpx;
+    box-sizing: border-box;
+}
+
+.progressContent {
+    height: 444rpx;
+    width: 100%;
+    border: 2rpx solid #C7C7C7;
+    margin-top: 28rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.right {
+    border-right: 2rpx solid #C7C7C7;
+}
+
+.bottom {
+    border-bottom: 2rpx solid #C7C7C7;
+}
+
+.progressItem {
+    width: 49.5%;
+    height: 72rpx;
+    padding: 38rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.progressItem image {
+    width: 70rpx;
+    height: 70rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+
+.progressText {
+    flex: 1;
+}
+
+.progressTextTitle {
+    font-size: 26rpx;
+    color: #333;
+    line-height: 30rpx;
+    font-weight: 600;
+    margin-top: 6rpx;
+}
+
+.progressTextContent {
+    font-size: 24rpx;
+    color: #999;
+    line-height: 28rpx;
+    margin-top: 6rpx;
+}
+
+.shop-image {
+    width: 100%;
+}
+
+.swiper2 {
+    margin-top: 28rpx;
+}
+
+.freshWrap {
+    display: flex;
+    align-items: center;
+}
+
+.freshWrap image {
+    width: 34rpx;
+    height: 34rpx;
+    margin-right: 14rpx;
+}
+
+.shopListTitleWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 17px;
+}
+.shopItem {
+    position: relative;
+    overflow: hidden;
+    padding: 11px 15px;
+    padding-right: 13px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.shopItemImg {
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    top: 32rpx;
+    left: 28rpx;
+    z-index: 1;
+}
+
+.itemDetails {
+    display: table;
+    table-layout: fixed;
+    width: 83.33333333%;
+    position: relative;
+}
+
+
+.itemDetails .mui-ellipsis {
+    width: 120%;
+    line-height: 40rpx;
+    font-weight: 500;
+    font-size: 30rpx;
+    color: #303030;
+}
+.mui-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.moneyShow {
+    color: #F66E00;
+    font-size: 24rpx;
+    float: right;
+    line-height: 80rpx;
+}
+
+.moneyShow text {
+    font-size: 36rpx;
+    color: #F66E00;
+    font-weight: 600;
+}
+.mui-table label {
+    line-height: 40rpx;
+    color: #C7C7C7;
+    font-weight: 500;
+    font-size: 24rpx;
+    min-width: 170rpx;
+    display: inline-block;
+}
+.itemDetails .mui-h6 {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #F66E00;
+}
+
+.shopItem:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 30rpx;
+    height: 2rpx;
+    content: '';
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
